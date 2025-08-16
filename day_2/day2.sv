@@ -15,7 +15,7 @@ module day2 (
   	q_norst_o <= d_i; 
   end
   
-  // synchronus reset
+  // synchronus reset, ONLY on clock
   always_ff@(posedge clk) begin
     if(reset) begin
       q_syncrst_o <= 0; 
@@ -24,11 +24,12 @@ module day2 (
     end
   end
   
-  always_ff@(posedge clk, reset) begin
+  // async reset should also be on positive edge to be cnosistent
+  always_ff@(posedge clk or posedge reset) begin
     if(reset) begin
-      q_syncrst_o <= 0; 
+      q_asyncrst_o <= 0; 
     end else begin
-      q_syncrst_o <= d_i; 
+      q_asyncrst_o <= d_i; 
     end
   end
 
