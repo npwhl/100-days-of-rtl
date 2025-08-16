@@ -17,3 +17,5 @@ $urandom_range = random unsigned
 
 write test benches in an initial block to have the ability
 to use time #10, #50...
+
+"initial" can't be synthesized :-)
