@@ -1,0 +1,19 @@
+Initially tried to do an always case, but didn't consider
+the wires in the module definition. 
+Typically don't want to store in a mux and simply pass
+values along, so you can't procedurally assign wires. They
+are only assigned at one spot and will change whenever the 
+wires change (the value is constantly flowing).
+
+Need to use register at the highest spot the variable
+will be used (will typically be stored here).
+But sysverilog has logic which can behave as both so it's 
+better to use it...?
+
+wires are good for transitions too...!
+
+(.*); = same name, same assignment
+$urandom_range = random unsigned
+
+write test benches in an initial block to have the ability
+to use time #10, #50...
