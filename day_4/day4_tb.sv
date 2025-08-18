@@ -8,10 +8,10 @@ module day4_tb ();
   
   initial begin
     for(int i = 0; i < 4; i++) begin
-      a_i = $urandom_range(0, 7'b11111111); 
-      b_i = $urandom_range(0, 7'b11111111); 
+      a_i <= $urandom_range(0, 7'b11111111); 
+      b_i <= $urandom_range(0, 7'b11111111); 
       for(int j = 0; i < 7; j++) begin
-      	op_i = j; 
+      	op_i <= j; 
         #10;
       end
       end

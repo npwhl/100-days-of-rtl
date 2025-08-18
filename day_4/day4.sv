@@ -6,22 +6,19 @@ module day4 (
   output    logic [7:0]   alu_o
 );
 
-  always@(op_i) begin
+  always_comb begin // use for combinational logic
     case(op_i)
-      3'b000 : alu_o = a_i + b_i; 
-      3'b001 : alu_o = a_i - b_i; 
-      3'b010 : begin
-      	a_i << 3; 
-        a_i[2:0] = b_i[2:0];
-      end
-      3'b011 : begin
-        a_i >> 3; 
-        a_i[7:5] = b_i[2:0];
-      end
-      3'b100 : alu_o = a_i & b_i; 
-      3'b101 : alu_o = a_i | b_i; 
-      3'b100 : alu_o = a_i ^ b_i; // bitwise xor
-      3'b100 : alu_o = (a_i == b_i) ? 1 : 0; 
+      // should also consider carries depending on what's needed
+      // carries are an extra bit long
+      3'b000 : {carry, alu_o}= {1'b0, a_i} + {1'b0, b_i};
+      3'b001 : alu_o <= a_i - b_i; 
+      3'b010 : a_i[7:0] << b_i[2:0]; // can just shift w/ bit length
+      3'b011 : a_i[7:0] >> b_i[2:0];
+      3'b100 : alu_o <= a_i & b_i; 
+      3'b101 : alu_o <= a_i | b_i; 
+      3'b110 : alu_o <= a_i ^ b_i; // bitwise xor
+      3'b111 : alu_o <= (a_i == b_i) ? 7'd1 : 7'b0; // should fill WHOLE output
+    endcase
   end
 
 endmodule
