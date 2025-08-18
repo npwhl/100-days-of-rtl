@@ -24,7 +24,7 @@ module day2 (
     end
   end
   
-  // async reset should also be on positive edge to be cnosistent
+  // async reset should also be on positive edge to be consistent
   always_ff@(posedge clk or posedge reset) begin
     if(reset) begin
       q_asyncrst_o <= 0; 

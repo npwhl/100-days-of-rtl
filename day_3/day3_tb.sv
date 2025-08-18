@@ -20,13 +20,10 @@ logic    falling_edge_o;
     @(posedge clk);
     reset <= 0; 
     a_i <= 1; 
-    @(posedge clk);
-    @(posedge clk);
-    @(negedge clk);
-    a_i <= 0; 
-    @(posedge clk);
-    @(posedge clk);
-    @(negedge clk);
-    a_i <= 1; 
+    for (int i=0; i<32; i++) begin
+      a_i <= $urandom_range(0, 1);
+      @(posedge clk);
+    end
+    $finish();
   end
 endmodule
