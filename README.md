@@ -9,5 +9,5 @@ For the first 21 days, I followed [QuickSilicon's course](https://quicksilicon.i
 | 2   | D FF               | [2](./day_2/) | [Always_ff and Always Clocks](./day_2/notes.md) |
 | 3   | Rising/Falling Edge Detector  | [3](./day_3/) | [Flip Flop Storage](./day_3/notes.md) |
 | 4   | ALU                | [4](./day_4/) | [Considering Combinational Logic](./day_4/notes.md) |
-| 5   |  8-bit Odd Counter | [5](./day_5/)  | [...](./day_5/notes.md) |
+| 5   |  8-bit Odd Counter | [5](./day_5/)  | [Two-block Design](./day_5/notes.md) |
 | 6   | Shift Register             | ... | ... |
