@@ -1,7 +1,7 @@
 module day5_tb ();
-  wire        clk;
-  wire        reset;
-  logic[7:0]  cnt_;
+  logic clk; // logic on highest!
+  logic reset;
+  logic[7:0] cnt_o;
 
 	always begin
     clk = 1; 
@@ -14,5 +14,8 @@ module day5_tb ();
   	reset = 1; 
     @(posedge clk);
     reset = 0; 
+    for(int i = 0; i < 20; i++) begin
+        @(posedge clk);
+    end
   end
 endmodule
