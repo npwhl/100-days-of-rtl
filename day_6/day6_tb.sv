@@ -15,6 +15,9 @@ module day6_tb ();
   
 	initial begin
     x_i = 1;
+    reset = 1; 
+    @(posedge clk); 
+    reset = 0;
     for(int i = 0; i < 8; i++) begin
       x_i = ~x_i; 
       @(posedge clk); 
