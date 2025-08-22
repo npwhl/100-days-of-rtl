@@ -10,4 +10,5 @@ For the first 21 days, I followed [QuickSilicon's course](https://quicksilicon.i
 | 3   | Rising/Falling Edge Detector  | [3](./day_3/) | [Flip Flop Storage](./day_3/notes.md) |
 | 4   | ALU                | [4](./day_4/) | [Considering Combinational Logic](./day_4/notes.md) |
 | 5   |  8-bit Odd Counter | [5](./day_5/)  | [Two-block Design](./day_5/notes.md) |
-| 6   | Shift Register             | ... | ... |
+| 6   | Shift Register     | [6](./day_6/) | [Keeping Wires Seperate From FF's](./day_6/notes.md) |
+| 7   | Linear Feedback Shift Register     | ... | ... |
