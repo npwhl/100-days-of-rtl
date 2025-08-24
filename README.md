@@ -11,4 +11,5 @@ For the first 21 days, I followed [QuickSilicon's course](https://quicksilicon.i
 | 4   | ALU                | [4](./day_4/) | [Considering Combinational Logic](./day_4/notes.md) |
 | 5   |  8-bit Odd Counter | [5](./day_5/)  | [Two-block Design](./day_5/notes.md) |
 | 6   | Shift Register     | [6](./day_6/) | [Keeping Wires Seperate From FF's](./day_6/notes.md) |
-| 7   | Linear Feedback Shift Register     | ... | ... |
+| 7   | Linear Feedback Shift Register     | [7](./day_6/) | [LFSR Design with FF's](./day_7/notes.md) |
+| 8   | Binary to One-Hot Converter (Also revisiting 5-7!)    | ... | ... |

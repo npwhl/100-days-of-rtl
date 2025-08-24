@@ -14,12 +14,12 @@ module day7 ( // "pseudorandom"
   always@(posedge clk or posedge reset) begin
     if(reset) ff <= 4'hE; 
     else begin
-      ff_2 <= ff; // cycle 2 - update the output
+      ff <= ff_2; // cycle 2 - update the output
     end
   end
 
   // cycle 1 - find the output w/ bit 1 and 3
-  assign ff_2 = {lfsr_ff[2:0], lfsr_ff[1] ^ lfsr_ff[3]};
+  assign ff_2 = {ff[2:0], ff[1] ^ ff[3]};
   assign lfsr_o = ff; // cycle 2 - update the output
 
 endmodule

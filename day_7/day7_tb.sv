@@ -1,7 +1,7 @@
 module day7_tb ();
-  wire      clk;
-  wire      reset;
-  wire[3:0] lfsr_o;
+  logic      clk; // REMEMBER: logic on highest level!!
+  logic      reset;
+  logic[3:0] lfsr_o;
   
   day7 tb (.*); 
   
